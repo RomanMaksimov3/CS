@@ -1,0 +1,107 @@
+using System;
+//Максимов Роман
+/// <summary>
+/// 1. Написать программу «Анкета». Последовательно задаются вопросы (имя, фамилия, возраст, рост, вес).
+/// В результате вся информация выводится в одну строчку.
+/// </summary>
+namespace homework1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Анкета");
+
+            Console.Write("Имя: ");
+            string name = Console.ReadLine();
+
+            Console.Write("Фамилия: ");
+            string surname = Console.ReadLine();
+
+            Console.Write("Возраст: ");
+            string age = Console.ReadLine();
+
+            Console.Write("Рост: ");
+            string h = Console.ReadLine();
+
+            Console.Write("Вес: ");
+            string m = Console.ReadLine();
+
+            Console.WriteLine(name + " " + surname + " " + age + " " + h + " " + m);
+            Console.WriteLine("{0} {1} {2} {3} {4}", age, surname, name, m, h);
+            Console.WriteLine($"{name} {surname} {age} {h} {m}");
+        }
+    }
+}
+
+using System;
+//Максимов Роман
+/// <summary>
+/// 2. Ввести вес и рост человека.Рассчитать и вывести индекс массы тела(ИМТ) по формуле
+/// I=m/(h* h); где m-масса тела в килограммах, h - рост в метрах
+/// </summary>
+namespace homework2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Рост, м: ");
+            double h = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Вес, кг: ");
+            double m = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("ИМЦ = " + m / (h * h));
+        }
+    }
+}
+
+using System;
+//Максимов Роман
+/// <summary>
+/// 3. а) Написать программу, которая подсчитывает расстояние между точками
+/// с координатами x1, y1 и x2,y2 по формуле r = Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2).
+/// Вывести результат, используя спецификатор формата .2f(с двумя знаками после запятой);
+/// </summary>
+namespace homework3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("x1 = ");
+            double x1 = Convert.ToDouble(Console.ReadLine());
+            Console.Write("y1 = ");
+            double y1 = Convert.ToDouble(Console.ReadLine());
+            Console.Write("x2 = ");
+            double x2 = Convert.ToDouble(Console.ReadLine());
+            Console.Write("x2 = ");
+            double y2 = Convert.ToDouble(Console.ReadLine());
+            Console.Write("y2 = ");
+            double r = Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2));
+            Console.WriteLine("{0:f2}", r);
+        }
+    }
+}
+
+using System;
+//Максимов Роман
+/// <summary>
+/// 5. а) Написать программу, которая выводит на экран ваше имя, фамилию и город проживания.
+/// б) Сделать задание, только вывод организуйте в центре экрана
+/// </summary>
+namespace homework5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string name = "Роман";
+            string surname = "Максимов";
+            string city = "Санкт-Петербург";
+            Console.SetCursorPosition(Console.WindowWidth / 2, Console.WindowHeight / 2);
+            Console.WriteLine("{0} {1} {2}", name, surname, city);
+        }
+    }
+}
